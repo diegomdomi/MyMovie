@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import Card from "./Card"
+
 
 const ApiMovie = () => {
 
@@ -9,7 +11,7 @@ const ApiMovie = () => {
             fetchData()
         },[])
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&'
 const apiKey = process.env.REACT_APP_APIKEY;
 
 function fetchData(){
@@ -25,7 +27,26 @@ function fetchData(){
     }
 }
   return (
-  <div></div>
+    <div className=" container p-4 ">
+    <h1 className="badge bg-warning text-dark mt-3 text-uppercase fs-2 mb-5">Most Popular Movie</h1>
+       
+     <div className="row ">
+        {
+            mostrar.map(item =>(
+               
+            <div className="col-md-3" key={item.id}>
+                <Card title={item.title}
+                      imgUrl={ `https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+                      overview={ item.overview }
+                      />
+            </div>
+           )
+           
+           )
+        }
+    
+</div>
+</div>
 )
 }
 
