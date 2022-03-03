@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from "react-router-dom"
 
 function Card({title,imgUrl,overview}) {
   return (
@@ -13,14 +14,14 @@ function Card({title,imgUrl,overview}) {
             ? overview.substring(0,50)
             : "sin referencia"}
         </p>
-        <a
+        <NavLink  to="/moviedetail"
           href={ "#!"}
           target="_blank"
           className="btn btn-outline-secondary border-1"
           rel="noreferrer"
         >
           Go 
-        </a>
+        </NavLink>
       </div>
     </div>
   )

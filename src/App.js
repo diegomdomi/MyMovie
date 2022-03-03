@@ -1,6 +1,7 @@
 import './App.css';
 import ApiMovie from './components/ApiMovie';
 import ApiTvShow from './components/ApiTvShow';
+import Moviedetail from './components/MovieDetail';
 import Navbar from './components/Navbar'
 import {
   BrowserRouter,
@@ -16,6 +17,7 @@ function App() {
           <Navbar/>
           <Route exact path="/" ><ApiMovie/> </Route>
           <Route exact path="/tvshow"><ApiTvShow/> </Route>
+          <Route exact path="/moviedetail"><Moviedetail/> </Route>
         </div>
         </BrowserRouter>
   );

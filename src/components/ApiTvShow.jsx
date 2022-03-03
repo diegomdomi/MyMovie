@@ -12,12 +12,12 @@ const ApiTvShow = () => {
               fetchData()
           },[])
   
-  const baseUrl = 'https://api.themoviedb.org/3/tv/popular?api_key=04214bd15117cc62260acfdfaedd0b78'
+  const baseUrl = 'https://api.themoviedb.org/3/tv/popular?'
   const apiKey = process.env.REACT_APP_APIKEY;
   
   function fetchData(){
       try{
-          fetch('https://api.themoviedb.org/3/tv/popular?api_key=04214bd15117cc62260acfdfaedd0b78')
+          fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
           .then(response=>response.json())
           .then(data=>{
               console.log(data.results)
@@ -36,9 +36,9 @@ const ApiTvShow = () => {
               mostrar.map(item =>(
                  
               <div className="col-md-3" key={item.id}>
-                  <Card title={item.title}
+                  <Card title={item.name}
                         imgUrl={ `https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
-                        overview={ item.overview }
+                        overview={ item.first_air_date }
                         />
               </div>
              )
