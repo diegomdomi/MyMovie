@@ -16,10 +16,10 @@ function Card({title,imgUrl,overview}) {
         <a
           href={ "#!"}
           target="_blank"
-          className="btn btn-outline-secondary border-0"
+          className="btn btn-outline-secondary border-1"
           rel="noreferrer"
         >
-          Go to MOVIE
+          Go 
         </a>
       </div>
     </div>
