@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
 
-function Card({title,imgUrl,overview,type,id}) {
+function Card({title, imgUrl, overview, type, id}) {
   return (
     <div className="card text-center bg-dark animate__animated animate__fadeInUp p-2">
       <div className="overflow">
