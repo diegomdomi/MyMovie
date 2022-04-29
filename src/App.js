@@ -17,7 +17,7 @@ function App() {
           <Navbar/>
           <Route exact path="/" ><ApiMovie/> </Route>
           <Route exact path="/tvshow"><ApiTvShow/> </Route>
-          <Route exact path="/moviedetail"><Moviedetail/> </Route>
+          <Route exact path="/moviedetail/:type/:id"><Moviedetail/> </Route>
         </div>
         </BrowserRouter>
   );

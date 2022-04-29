@@ -11,7 +11,7 @@ const ApiMovie = () => {
             fetchData()
         },[])
 
-const baseUrl = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&'
+const baseUrl = 'https://api.themoviedb.org/3/movie/popular?'
 const apiKey = process.env.REACT_APP_APIKEY;
 
 function fetchData(){
@@ -36,8 +36,10 @@ function fetchData(){
                
             <div className="col-md-3" key={item.id}>
                 <Card title={item.title}
-                      imgUrl={ `https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+                      imgUrl={ `https://image.tmdb.org/t/p/original/${item.poster_path}`}
                       overview={ item.overview }
+                      id={ item.id }
+                      type="movie"
                       />
             </div>
            )

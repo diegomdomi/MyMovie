@@ -17,7 +17,7 @@ const ApiTvShow = () => {
   
   function fetchData(){
       try{
-          fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
+          fetch(`${baseUrl}api_key=${apiKey}`)
           .then(response=>response.json())
           .then(data=>{
               console.log(data.results)
@@ -37,9 +37,12 @@ const ApiTvShow = () => {
                  
               <div className="col-md-3" key={item.id}>
                   <Card title={item.name}
-                        imgUrl={ `https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+                        imgUrl={ `https://image.tmdb.org/t/p/original/${item.poster_path}`}
                         overview={ item.first_air_date }
-                        />
+                        id={ item.id }
+                        type='tv'
+
+                    />
               </div>
              )
              
