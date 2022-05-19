@@ -11,7 +11,7 @@ const ApiMovie = () => {
             fetchData()
         },[])
 
-const baseUrl = 'https://api.themoviedb.org/3/movie/popular?'
+const baseUrl = 'https://api.themoviedb.org/3/movie/top_rated?'
 const apiKey = process.env.REACT_APP_APIKEY;
 
 function fetchData(){
