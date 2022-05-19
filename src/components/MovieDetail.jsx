@@ -26,28 +26,23 @@ function fetchData(){
 }
   return (
     
-    <div className="movieDetail" style={{ 
-      backgroundImage: `url("https://image.tmdb.org/t/p/original/${mostrar.poster_path}")`,
-    }}>
-      <div className="clearfix">
-   
-  <img src={`https://image.tmdb.org/t/p/original/${mostrar.backdrop_path}`} class="col-md-6 float-md-end mb-3 ms-md-3" alt="im."/>
 
-  <h3>
-    {type === "tv" ? mostrar.original_name : mostrar.title}
-  </h3>
-
-  <h5>
-    {mostrar.overview}
-  </h5>
-
-  <p>
-
-  </p>
-
+<div class="container ">
+<div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4" >
+      <img src={`https://image.tmdb.org/t/p/original/${mostrar.backdrop_path}`} class="img-fluid rounded-start" alt="..."/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" >
+        <h5 class="card-title">{type === "tv" ? mostrar.original_name : mostrar.title}</h5>
+        <p class="card-text">{mostrar.overview}</p>
+        <p class="card-text"><small class="text-muted">{mostrar.release_date}</small></p>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
-
 
     )
 }
