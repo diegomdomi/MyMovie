@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 
 const MovieDetail = () => {
   const [mostrar, setMostrar] = useState([])
-  const{type,id}=useParams()
+  const {type,id} = useParams()
 
   useEffect(()=>{
             fetchData()
@@ -23,27 +23,35 @@ function fetchData(){
     }catch(error){
         console.log(error)
     }
+    
 }
+
+const imagen =  `https://image.tmdb.org/t/p/original/${mostrar.backdrop_path}`
+console.log(imagen)
   return (
     
-
-<div class="container ">
-<div class="card mb-3" >
-  <div class="row g-0">
-    <div class="col-md-4" >
-      <img src={`https://image.tmdb.org/t/p/original/${mostrar.backdrop_path}`} class="img-fluid rounded-start" alt="..."/>
+<>
+<div className="container detail">
+  <div className="overflow"> 
+<div className="card mb-3" >
+  <div className="row  g-0">
+    <div className="col-md-4" >
+      <img src={`https://image.tmdb.org/t/p/original/${mostrar.poster_path}`} class="img-fluid rounded-start" alt="..."/>
     </div>
-    <div class="col-md-8">
-      <div class="card-body" >
-        <h5 class="card-title">{type === "tv" ? mostrar.original_name : mostrar.title}</h5>
-        <p class="card-text">{mostrar.overview}</p>
-        <p class="card-text"><small class="text-muted">{mostrar.release_date}</small></p>
+    <div className=" col-md-8 " style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${mostrar.backdrop_path})`,opacity:"0.9"}}>
+      <div className="card-body" >
+        <h4 className="card-title text-white ">{type === "tv" ? mostrar.original_name : mostrar.title}</h4>
+        <p className="card-text text-white">{mostrar.overview}</p>
+        <p className="card-text"><small className="text-white">{mostrar.release_date}</small></p>
       </div>
     </div>
   </div>
+  </div>
 </div>
 </div>
-
+<div>
+</div>
+</>
     )
 }
 
