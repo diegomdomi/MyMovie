@@ -26,8 +26,7 @@ function fetchData(){
     
 }
 
-const imagen =  `https://image.tmdb.org/t/p/original/${mostrar.backdrop_path}`
-console.log(imagen)
+
   return (
     
 <>
