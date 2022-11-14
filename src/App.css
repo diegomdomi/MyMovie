@@ -15,6 +15,13 @@
   background: rgb(142,23,10);
   background: linear-gradient(90deg, rgba(142,23,10,1) 0%, rgba(81,88,175,0.9920343137254902) 71%, rgba(207,15,60,1) 100%);
 }
+
+.row{
+  row-gap: 15px;
+}
+.card{
+  height: 550px;
+}
 .card:hover {
   box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.74) !important;
   transition: all 0.5s linear;
@@ -29,7 +36,9 @@
   padding: 0.3rem 1rem;
   font-size: 1rem;
 }
-
+.card_detail{
+  max-height: 100%;
+}
 .overflow {
   overflow: hidden;
 }

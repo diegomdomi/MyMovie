@@ -31,7 +31,7 @@ const ApiTvShow = () => {
       <div className=" container p-4 ">
       <h1 className="badge bg-warning text-dark mt-3 text-uppercase fs-2 mb-5">Most Popular Tv-Show</h1>
          
-       <div className="row ">
+       <div className="row" >
           {
               mostrar.map(item =>(
                  
