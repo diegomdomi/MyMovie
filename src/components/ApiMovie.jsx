@@ -32,7 +32,7 @@ function fetchData(){
        
      <div className="row ">
         {
-            mostrar.map(item =>(
+            mostrar?.map(item =>(
                
             <div className="col-md-3" key={item.id}>
                 <Card title={item.title}
